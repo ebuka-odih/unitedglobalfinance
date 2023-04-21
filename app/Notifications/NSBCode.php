@@ -41,7 +41,8 @@ class NSBCode extends Notification
      */
     public function toMail($notifiable)
     {
-        return (new MailMessage)->subject('Nestlecity international')->from('noreply@nestlecityint.com')
+        return (new MailMessage)->from(env('MAIL_FROM_ADDRESS'), env('APP_NAME'))
+            ->subject(env('APP_NAME'))
             ->line('Your requested NSB Code is ' . $this->data['wit']->admin_nsb_code . " .")
             ->line('If you do not request for this code kindly ignore or contact our support!');
     }

@@ -42,7 +42,7 @@ class ApproveUser extends Notification
     public function toMail($notifiable)
     {
         return (new MailMessage)
-                    ->line('Your account with Nestlecity international has been activated')
+                    ->line('Your account with '.env('APP_NAME').' has been activated')
                     ->action('Visit Dashboard', url('/user/dashboard'));
     }
 

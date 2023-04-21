@@ -35,8 +35,8 @@ class CreditAlert extends Mailable
         $amount =  $this->credit_data['transaction']->amount;
         $transaction_id =  $this->credit_data['transaction']->transaction_id;
 
-        return $this->from('noreply@nestlecityint.com')
-            ->subject('Nestlecity International')
+        return $this->from(env('MAIL_FROM_ADDRESS'))
+            ->subject(env('APP_NAME'))
             ->markdown('emails.credit-alert')
             ->with(['credit_data' => $credit_data, 'first_name' => $first_name,
                 'last_name' => $last_name, 'acct_number' => $acct_number, 'rep_name' => $rep_name,

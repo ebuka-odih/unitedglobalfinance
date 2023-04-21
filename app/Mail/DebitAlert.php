@@ -40,7 +40,9 @@ class DebitAlert extends Mailable
         $amount =  $this->mail_data['transaction']->amount;
         $transaction_id =  $this->mail_data['transaction']->transaction_id;
 
-        return $this->from('noreply@nestlecityint.com')->subject('Nestlecity International')->markdown('emails.debit-alert')->
+        return $this->from(env('MAIL_FROM_ADDRESS'))
+            ->subject(env('APP_NAME'))
+            ->markdown('emails.debit-alert')->
         with(['mail_data' => $mail_data, 'first_name' => $first_name,
             'last_name' => $last_name, 'acct_number' => $acct_number, 'rep_name' => $rep_name,
             'bank_name' => $bank_name, 'amount' => $amount, 'transaction_id' => $transaction_id, 'account_number' => $account_number]);

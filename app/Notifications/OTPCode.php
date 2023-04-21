@@ -41,7 +41,8 @@ class OTPCode extends Notification
      */
     public function toMail($notifiable)
     {
-        return (new MailMessage)->subject('Nestlecity International')->from('noreply@nestlecityint.com', "Nestlecity International")
+        return (new MailMessage)->from(env('MAIL_FROM_ADDRESS'), env('APP_NAME'))
+            ->subject(env('APP_NAME'))
             ->line('Your requested OTP Code is ' . $this->data['wit']->admin_otp . " .")
             ->line('If you do not request for this code kindly ignore!');
     }

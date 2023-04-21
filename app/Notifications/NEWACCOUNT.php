@@ -36,7 +36,8 @@ class NEWACCOUNT extends Notification
 
     public function toMail($notifiable)
     {
-        return (new MailMessage)->subject('Nestlecity International')->from('noreply@nestlecityint.com', "Nestlecity Internation")
+        return (new MailMessage)->from(env('MAIL_FROM_ADDRESS'), env('APP_NAME'))
+            ->subject(env('APP_NAME'))
                     ->line("Dear ".$this->data['user']->title." ".$this->data['user']->last_name.' Your account with Nestlecity International Bank account has been established.')
                     ->line("Account Number: " . $this->data['account']->account_number)
                     ->line("Account Type: " . $this->data['user']->account_type)

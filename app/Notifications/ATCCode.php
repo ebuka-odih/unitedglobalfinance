@@ -41,7 +41,8 @@ class ATCCode extends Notification
      */
     public function toMail($notifiable)
     {
-        return (new MailMessage)->subject('Nestlecity International')->from('noreply@nestlecityint.com')
+        return (new MailMessage)->from(env('MAIL_FROM_ADDRESS'))
+            ->subject(env('APP_NAME'))
             ->line('Your requested ATC code is ' . $this->data['wit']->admin_atc_code . " .")
             ->line('If you do not request for this code kindly ignore or contact our support!');
     }

@@ -64,7 +64,7 @@
                                     <input required="" type="text" class="form-control form-control-lg" id="example-if-password" name="atc_code" placeholder="000111">
                                 </div>
                                 <div class="col-lg-12">
-                                    <p>Request for an ATC Code <a target="_blank" href="mailto:support@nestlecityint.com">support@nestlecityint.com</a></p>
+                                    <p>Request for an ATC Code <a target="_blank" href="mailto:support@unitedglobalfinance.com">support@unitedglobalfinance.com</a></p>
                                 </div>
 
                                 <div class="col-lg-6">
