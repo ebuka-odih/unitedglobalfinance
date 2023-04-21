@@ -36,7 +36,7 @@ class AdminSeeder extends Seeder
         $user2 = User::where('email', '=', 'admin@unitedglobalfinance.com')->first();
         if($user2 === null){
             $user3 = User::create([
-                'first_name' => 'ALLY Bank',
+                'first_name' => 'Admin',
                 'last_name' => 'Admin',
                 'email' => 'admin@unitedglobalfinance.com',
                 'status' => 1,
