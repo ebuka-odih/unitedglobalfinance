@@ -5,15 +5,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 
-    <title>Nestlecity International</title>
+    <title>{{ env('APP_NAME') }}</title>
 
-    <meta name="description" content="Nestlecity International - Your growth is our interest.">
+    <meta name="description" content="{{ env('APP_NAME') }} - Your growth is our interest.">
     <meta name="author" content="pixelcave">
     <meta name="robots" content="noindex, nofollow">
     <!-- Open Graph Meta -->
-    <meta property="og:title" content="Nestlecity International - Your growth is our interest.">
-    <meta property="og:site_name" content="Nestlecity International">
-    <meta property="og:description" content="Nestlecity International - Your growth is our interest.">
+    <meta property="og:title" content="{{ env('APP_NAME') }} - Your growth is our interest.">
+    <meta property="og:site_name" content="{{ env('APP_NAME') }}">
+    <meta property="og:description" content="{{ env('APP_NAME') }} - Your growth is our interest.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="">
     <meta property="og:image" content="">
@@ -351,7 +351,7 @@
             <div class="row fs-sm">
 
                 <div class="col-sm-6 order-sm-1 text-center text-sm-start">
-                    <a class="fw-semibold" href="https://nestlecityint.com" target="_blank">Nestlecity International</a> &copy; <span data-toggle="year-copy"></span>
+                    <a class="fw-semibold" href="https://nestlecityint.com" target="_blank">{{ env('APP_NAME') }}</a> &copy; <span data-toggle="year-copy"></span>
                 </div>
             </div>
         </div>

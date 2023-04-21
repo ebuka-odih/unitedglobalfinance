@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 
-    <title>Ally International Commerce Bank</title>
+    <title>{{ env('APP_NAME') }}</title>
 
     <meta name="description" content="Nations Star Bank PLC - Your growth is our interest.">
     <meta name="author" content="pixelcave">
