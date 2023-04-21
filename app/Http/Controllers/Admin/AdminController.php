@@ -20,8 +20,8 @@ class AdminController extends Controller
 
     public function dashboard()
     {
-        $deposits = Deposit::all()->count();
-        $withdrawal = Withdrawal::all()->count();
+        $deposits = Deposit::where('status', 1)->select('amount')->sum('amount');
+        $withdrawal = Withdrawal::where('status', 1)->select('amount')->sum('amount');
         $users = User::all()->where('admin', 0)->count();
         return view('admin.dashboard', compact('deposits','withdrawal', 'users'));
     }
