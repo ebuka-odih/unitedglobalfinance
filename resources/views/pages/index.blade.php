@@ -386,7 +386,7 @@
 <section class="consultation-cta">
     <div class= "row medium-collapse full-width" data-equalizer data-equalize-on="medium">
         <div class="small-12 medium-7 columns consultation-cta-left" data-equalizer-watch>
-            <p x-ms-format-detection="none">Interested in banking with us? Send us a mail <a href="mailto:support@nestlecityint.com">support@nestlecityint.com</a></p>
+            <p x-ms-format-detection="none">Interested in banking with us? Send us a mail <a href="mailto:support@unitedglobalfinance.com">support@unitedglobalfinance.com</a></p>
         </div>
         <a href="contact"  class="small-12 medium-5 columns consultation-cta-right"  data-equalizer-watch>
             <p>Request a Consultation</p>

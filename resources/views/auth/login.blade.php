@@ -5,10 +5,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Meta -->
-    <meta name="description" content="NationsStar Bank PLC.">
+    <meta name="description" content="{{ env('APP_NAME') }}.">
     <meta name="author" content="ThemePixels">
 
-    <title>NationsStar Bank PLC</title>
+    <title>{{ env('APP_NAME') }}</title>
 
     <!-- vendor css -->
     <link href="../lib/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
@@ -26,7 +26,7 @@
       <div class="login-wrapper wd-300 wd-xs-400 pd-25 pd-xs-40 bg-white rounded shadow-base">
           <a href="{{ route('index') }}">
 {{--              <img style="height: 200px; width: 200px; margin-top: -50px; margin-bottom: -40px" src="{{ asset('img/nations star logo.png') }}" alt="">--}}
-              <div class="signin-logo tx-center tx-28 tx-bold tx-inverse"><span class="tx-normal">[</span> Nestlecity <span class="tx-info">International</span> <span class="tx-normal">]</span></div>
+              <div class="signin-logo tx-center tx-28 tx-bold tx-inverse"><span class="tx-normal">[</span> {{ env('APP_NAME') }} <span class="tx-normal">]</span></div>
           </a>
           <form class="mt-4" action="{{ route('login') }}" method="POST">
               @csrf
