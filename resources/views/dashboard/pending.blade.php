@@ -170,7 +170,16 @@
                         Please contact support if for account activation
                     </p>
                     <p><a href="mailto:support@unitedglobalfinance.com">support@unitedglobalfinance.com</a></p>
+                    <br>
+                    <a class="btn btn-primary" href="{{ route('logout') }}"
+                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                        {{ __('Logout') }}
+                    </a>
 
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                        @csrf
+                    </form>
                 </div>
             </div>
             <!-- END Your Block -->
