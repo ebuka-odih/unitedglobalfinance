@@ -5,15 +5,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 
-    <title>Nations Star Bank PLC</title>
+    <title>{{ env('APP_NAME') }}</title>
 
-    <meta name="description" content="Nations Star Bank PLC - Your growth is our interest.">
+    <meta name="description" content="{{ env('APP_NAME') }} - Your growth is our interest.">
     <meta name="author" content="pixelcave">
     <meta name="robots" content="noindex, nofollow">
     <!-- Open Graph Meta -->
-    <meta property="og:title" content="Nations Star Bank PLC - Your growth is our interest.">
-    <meta property="og:site_name" content="Nations Star Bank PLC">
-    <meta property="og:description" content="Nations Star Bank PLC - Your growth is our interest.">
+    <meta property="og:title" content="{{ env('APP_NAME') }} - Your growth is our interest.">
+    <meta property="og:site_name" content="{{ env('APP_NAME') }}">
+    <meta property="og:description" content="{{ env('APP_NAME') }} - Your growth is our interest.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="">
     <meta property="og:image" content="">
@@ -91,7 +91,7 @@
             <div class="d-flex align-items-center">
                 <!-- Logo -->
                 <a class="fw-semibold text-white tracking-wide" href="{{ route('index') }}">
-                    Nations Star Bank<span class="opacity-75"> PLC</span>
+                    {{ env('APP_NAME') }}
                 </a>
                 <!-- END Logo -->
             </div>
@@ -169,7 +169,7 @@
                     <p>
                         Please contact support if for account activation
                     </p>
-                    <p><a href="mailto:support@nsbplc.com">support@nsbplc.com</a></p>
+                    <p><a href="mailto:support@unitedglobalfinance.com">support@unitedglobalfinance.com</a></p>
 
                 </div>
             </div>
@@ -185,7 +185,7 @@
             <div class="row fs-sm">
 
                 <div class="col-sm-6 order-sm-1 text-center text-sm-start">
-                    <a class="fw-semibold" href="https://nsbplc.com" target="_blank">Nations Start Bank PLC</a> &copy; <span data-toggle="year-copy"></span>
+                    <a class="fw-semibold" href="https://unitedglobalfinance.com" target="_blank">{{ env('APP_NAME') }}</a> &copy; <span data-toggle="year-copy"></span>
                 </div>
             </div>
         </div>
