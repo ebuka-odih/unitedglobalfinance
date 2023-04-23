@@ -53,4 +53,18 @@ class AdminDeposits extends Controller
         return redirect()->back();
     }
 
+    public function details($id)
+    {
+        $deposit = Deposit::findOrFail($id);
+        return view('admin.deposits.details', compact('deposit'));
+    }
+
+    public function backDate(Request $request)
+    {
+        $id = $request->deposit_id;
+        $user = Deposit::findOrFail($id);
+        $user->update(['created_at' => $request->created_at]);
+        return redirect()->back()->with('success', 'Date updated successfully');
+    }
+
 }

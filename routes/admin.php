@@ -42,9 +42,11 @@ Route::group(['middleware' => ['auth', 'admin'], 'prefix' => 'admin', 'as' => 'a
 
     //  Deposits Route
     Route::get('add/deposit', "Admin\AdminDeposits@add_deposit")->name('add_deposit');
+    Route::get('deposit/{id}/details', "Admin\AdminDeposits@details")->name('deposit.details');
     Route::get('deposit', "Admin\AdminDeposits@deposits")->name('deposits');
     Route::post('store/deposit', "Admin\AdminDeposits@storeDeposit")->name('storeDeposit');
     Route::delete('delete/deposit/{id}', "Admin\AdminDeposits@deleteDeposit")->name('deleteDeposit');
+    Route::patch('update/deposit/date', "Admin\AdminDeposits@backDate")->name('deposit.backDate');
 
     // Loan Routes
     Route::get('active/loans', "Admin\AdminLoans@activeLoans")->name('activeLoans');

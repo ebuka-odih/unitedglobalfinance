@@ -49,9 +49,9 @@
                                     <td class="d-none d-sm-table-cell"> {!! $item->status() !!} </td>
                                     <td class="text-center">
                                         <div class="btn-group">
-{{--                                            <a href="{{ route('admin.obankTransferDetails', $item->id) }}" class="btn btn-sm btn-alt-secondary js-bs-tooltip-enabled" data-bs-toggle="tooltip" title="View User" data-bs-original-title="View">--}}
-{{--                                                <i class="fa fa-eye"></i>--}}
-{{--                                            </a>--}}
+                                            <a href="{{ route('admin.deposit.details', $item->id) }}" class="btn btn-sm btn-alt-secondary js-bs-tooltip-enabled" data-bs-toggle="tooltip" title="View User" data-bs-original-title="View">
+                                                <i class="fa fa-eye"></i>
+                                            </a>
                                             <form method="POST" action="{!! route('admin.deleteDeposit', $item->id) !!}" accept-charset="UTF-8">
                                                 <input name="_method" value="DELETE" type="hidden">
                                                 {{ csrf_field() }}
@@ -76,6 +76,7 @@
                     </div>
 
                 </div>
+
             </div>
         </div>
         <!-- END Dynamic Table with Export Buttons -->
