@@ -40,6 +40,15 @@ class UserController extends Controller
         $user_details = User::findOrFail($id);
         return view('admin.user.personal', compact('user_details'));
     }
+
+    public function backDate(Request $request)
+    {
+        $id = $request->user_id;
+        $user = User::findOrFail($id);
+        $user->update(['created_at' => $request->created_at]);
+        return redirect()->back()->with('success', 'Date updated successfully');
+    }
+
     public function edit_details($id)
     {
         $user_details = User::findOrFail($id);

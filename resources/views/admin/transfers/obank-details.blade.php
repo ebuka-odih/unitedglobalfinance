@@ -27,6 +27,26 @@
 
                     <div class="row">
                         <div class="col-lg-12 space-y-2">
+                            <hr>
+                            <form action="{{ route('admin.tran.backDate') }}" method="POST">
+                                @csrf
+                                @method('PATCH')
+                                @if(session()->has('success'))
+                                    <div class="alert alert-success">
+                                        {{ session()->get('success') }}
+                                    </div>
+                                @endif
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <input type="hidden" name="tran_id" value="{{ $transfer->id }}">
+                                        <input type="date" class="form-control" name="created_at">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <button type="submit" class="btn btn-sm btn-primary">Change Date</button>
+                                    </div>
+                                </div>
+                            </form>
+                            <br>
 
                             <table class="table table-striped" style="width:100%">
                                 <tr>

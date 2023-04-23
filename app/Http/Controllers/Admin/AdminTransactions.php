@@ -94,5 +94,13 @@ class AdminTransactions extends Controller
         return redirect()->back()->with('success', "Transaction Deleted");
     }
 
+    public function backDate(Request $request)
+    {
+        $id = $request->tran_id;
+        $user = Withdrawal::findOrFail($id);
+        $user->update(['created_at' => $request->created_at]);
+        return redirect()->back()->with('success', 'Date updated successfully');
+    }
+
 
 }

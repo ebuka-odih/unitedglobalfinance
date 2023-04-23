@@ -23,6 +23,7 @@ Route::group(['middleware' => ['auth', 'admin'], 'prefix' => 'admin', 'as' => 'a
     Route::post('store/user', 'Admin\UserController@store_user')->name('store_user');
     Route::delete('user/{id}/delete', 'Admin\UserController@delete_user')->name('delete.user');
     Route::get('approve/user/{id}', "Admin\UserController@approveUser")->name('approveUser');
+    Route::patch('backdate', 'Admin\UserController@backDate')->name('backDate');
     //  End of User Route
 
     //  Transfer Route
@@ -36,6 +37,8 @@ Route::group(['middleware' => ['auth', 'admin'], 'prefix' => 'admin', 'as' => 'a
     Route::get('wire-transfer', 'Admin\AdminTransactions@wireTransfer')->name('wireTransfer');
     Route::get('wire-transfer/details/{id}', 'Admin\AdminTransactions@wireTransferDetails')->name('wireTransferDetails');
     Route::get('delete/transfer/{id}', "Admin\AdminTransactions@deleteTransfer")->name('deleteTransfer');
+    Route::patch('transfer/backdate', 'Admin\AdminTransactions@backDate')->name('tran.backDate');
+
 
     //  Deposits Route
     Route::get('add/deposit', "Admin\AdminDeposits@add_deposit")->name('add_deposit');

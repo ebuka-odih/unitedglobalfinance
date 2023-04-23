@@ -55,6 +55,27 @@
                    </tr>
                </table>
            </div>
+           <br>
+           <hr>
+           <form action="{{ route('admin.backDate') }}" method="POST">
+               @csrf
+               @method('PATCH')
+               @if(session()->has('success'))
+                   <div class="alert alert-success">
+                       {{ session()->get('success') }}
+                   </div>
+               @endif
+                <div class="row">
+                    <div class="col-md-6">
+                        <input type="hidden" name="user_id" value="{{ $user_details->id }}">
+                        <input type="date" class="form-control" name="created_at">
+                    </div>
+                    <div class="col-md-6">
+                        <button type="submit" class="btn btn-sm btn-primary">Change Date</button>
+                    </div>
+                </div>
+           </form>
+           <br>
 
            <!-- Latest Projects -->
            <h2 class="content-heading">
@@ -64,7 +85,7 @@
                <table class="table table-striped" style="width:100%">
                    <tr>
                        <th>Registered:</th>
-                       <td>{{ date('y-M-d', strtotime($user_details->created_at)) }}</td>
+                       <td>{{ date('Y M-d', strtotime($user_details->created_at)) }}</td>
                    </tr>
                    <tr>
                        <th>Title:</th>
