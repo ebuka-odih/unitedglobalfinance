@@ -52,6 +52,9 @@
                                                     <i class="fa fa-check"></i>
                                                 </a>
                                                 @endif
+                                                <a href="{{ route('admin.blockUser', $item->id) }}" class="btn btn-sm btn-alt-danger js-bs-tooltip-enabled" data-bs-toggle="tooltip" title="Approve User" data-bs-original-title="Edit">
+                                                    <i class="fa fa-times-circle"></i>
+                                                </a>
                                                 <a href="{{ route('admin.user_details', $item->id) }}" class="btn btn-sm btn-alt-secondary js-bs-tooltip-enabled" data-bs-toggle="tooltip" title="View User" data-bs-original-title="Edit">
                                                     <i class="fa fa-eye"></i>
                                                 </a>

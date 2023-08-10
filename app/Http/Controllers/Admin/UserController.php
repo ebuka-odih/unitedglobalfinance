@@ -62,7 +62,13 @@ class UserController extends Controller
         $user->save();
         Notification::send($user, new ApproveUser($user));
         return redirect()->back();
-
+    }
+    public function blockUser($id)
+    {
+        $user = User::findOrFail($id);
+        $user->status = 0;
+        $user->save();
+        return redirect()->back()->with('success', "User Has Been blocked");
     }
 
     public function delete_user($id)

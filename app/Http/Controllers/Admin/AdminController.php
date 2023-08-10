@@ -137,8 +137,6 @@ class AdminController extends Controller
 
     }
 
-
-
     public function approve_user($id)
     {
         $user = User::findOrFail($id);
@@ -146,6 +144,7 @@ class AdminController extends Controller
         $user->save();
         return redirect()->back()->with('success', "User Has Been Verified");
     }
+
 
 
     public function edit_user($id)
